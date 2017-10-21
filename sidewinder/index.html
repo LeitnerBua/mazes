@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sidewinder</title>
+    <meta charset="utf-8">
+    <script src="libraries\p5.js" type="text/javascript"></script>
+    <script src="libraries\p5.dom.js" type="text/javascript"></script>
+    <script src="distance.js" type="text/javascript"></script>
+    <script src="cell.js" type="text/javascript"></script>
+    <script src="grid.js" type="text/javascript"></script>
+    <script src="sidewinder.js" type="text/javascript"></script>
+    <script src="sketch.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+
+            background-color: #b3b3b3;
+        }
+
+        #maze {
+            max-width: 600px;
+            max-height: 600px;
+
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        .col .row {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: none;
+            padding-right: 0;
+        }
+        .control {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="maze" class="col"></div>
+            <div class="col control">
+                <button type="Button" id="reset" class="btn btn-outline-dark">reset</button>
+                <button type="Button" id="run" class="btn btn-outline-dark">run</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
