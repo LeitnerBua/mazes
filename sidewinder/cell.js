@@ -87,11 +87,21 @@ class Cell {
         let new_frontier = [];
 
         for(let x = 0; x < frontier.length; x++) {
-          for(let y = 0; y < frontier[x].links.length; y++) {
-            if(distances.isInCells)
+          let cell = frontier[x];
+          for(let l = 0; l < cell.links.length; l++) {
+            let linked = distances.getDistance(cell.links[l]);
 
+            if(linked !== -1)
+              continue;
+
+            distances.cells[linked] = distances.cells[cell] + 1;
+            new_frontier.push(linked);
           }
+
+          frontier = new_frontier;
         }
+
+        return distances;
       }
     }
 
